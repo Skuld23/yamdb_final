@@ -1,4 +1,4 @@
-![status](https://github.com/Skuld23/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)
+![status](https://github.com/Skuld23/yamdb_final/actions/workflow/yamdb_workflow.yml/badge.svg)
 # Проект Яндекс-Практикума YaMDb
 
 ## Описание
