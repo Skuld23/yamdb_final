@@ -1,7 +1,7 @@
-![status](https://github.com/Skuld23/yamdb_final/actions/workflow/yamdb_workflow.yml/badge.svg?branch=master&event=push)
+[![status](https://github.com/skuld23/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)](github.com/skuld23/yamdb_final/actions/workflows/yamdb_workflow.yml)
 # Проект Яндекс-Практикума YaMDb
 
-## Описание
+## Описание 
 Данный проект реализует REST API для сервиса YaMDb — базы отзывов о книгах, музыке и фильмах.<br>
 Сервис YaMDb собирает отзывы пользователей на произведения. Произведения делятся на категории: «Книги», «Фильмы», «Музыка». Список категорий (Category) может быть расширен через интерфейс администратора.<br>
 Пользователи могут оставить к произведениям текстовые отзывы и поставить произведению оценку от 1 до 10. Из пользовательских оценок формируется усреднённая оценка произведения — рейтинг.
