@@ -22,15 +22,10 @@ jobs:
         # установка зависимостей
         pip install -r requirements.txt 
 
-    - name: Test with flake8 and django tests
+    - name: Test with flake8 and pytest
       run: |
-        # запуск проверки проекта по flake8
         python -m flake8
-        # перейти в папку, содержащую manage.py — 
-        #<корневая_папка_infra_actions>/<папка_проекта>/manage.py
-        cd infra_project/
-        # запустить написанные разработчиком тесты
-        python manage.py test
+        pytest
 
   build_and_push_to_docker_hub:
     name: Push Docker image to Docker Hub
@@ -67,11 +62,17 @@ jobs:
           username: ${{ secrets.USER }}
           key: ${{ secrets.SSH_KEY }}
           script: |
-            # Выполняет pull образа с DockerHub
-            sudo docker pull skuld23/api_yamdb
-            #остановка всех контейнеров
-            sudo docker stop $(sudo docker ps -a -q)
-            sudo docker run --rm -d -p 5000:5000 skuld23/api_yamdb
+            sudo docker-compose stop
+            sudo docker-compose rm web
+            touch .env
+            echo DB_ENGINE=${{ secrets.DB_ENGINE }} >> .env
+            echo DB_NAME=${{ secrets.DB_NAME }} >> .env
+            echo POSTGRES_USER=${{ secrets.POSTGRES_USER }} >> .env
+            echo POSTGRES_PASSWORD=${{ secrets.POSTGRES_PASSWORD }} >> .env
+            echo DB_HOST=${{ secrets.DB_HOST }} >> .env
+            echo DB_PORT=${{ secrets.DB_PORT }} >> .env
+            sudo docker-compose up -d 
+ 
 
   send_message:
     runs-on: ubuntu-latest
