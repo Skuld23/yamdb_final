@@ -1,4 +1,4 @@
-name: Django-app workflow
+name: Yamdb workflow
 
 on: [push]
 
@@ -50,6 +50,7 @@ jobs:
         with:
           push: true
           tags: skuld23/api_yamdb:latest
+          file: api_yamdb/Dockerfile
 
   deploy:
     runs-on: ubuntu-latest
