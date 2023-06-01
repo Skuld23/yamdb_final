@@ -61,6 +61,7 @@ class SerializerForSignUp(serializers.ModelSerializer):
         user = User.objects.create(
             username=self.validated_data['username'],
             email=self.validated_data['email'],)
+        print(user)
         return user
 
     class Meta:
