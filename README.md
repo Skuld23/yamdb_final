@@ -115,4 +115,20 @@ POSTGRES_USER=username # логин для подключения к базе д
 POSTGRES_PASSWORD=password # пароль для подключения к БД 
 DB_HOST=db # название сервиса (контейнера)
 DB_PORT=5432 # порт для подключения к БД 
+``
+
+## После успешного деплоя
+* Создать суперпользователя:
+```
+docker-compose exec web python manage.py createsuperuser
+```
+
+* Для проверки работоспособности приложения:
+```
+http:/<ip_address>/admin/
+```
+
+## Документация для YaMDb доступна по адресу:
+```
+http:/<ip_address>/redoc/
 ```
