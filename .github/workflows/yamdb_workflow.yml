@@ -54,13 +54,13 @@ jobs:
       - name: executing remote ssh commands to deploy
         uses: appleboy/ssh-action@master
         with:
-          host: $${{ secrets.HOST }}
+          host: ${{ secrets.HOST }}
           username: ${{ secrets.USER }}
-          key: $${{ secrets.SSH_KEY }}
+          key: ${{ secrets.SSH_KEY }}
           passphrase: ${{ secrets.PASSPHRASE }}
           script: |
-            sudo docker compose stop
-            sudo docker compose rm web
+            sudo docker-compose stop
+            sudo docker-compose rm web
             touch .env
             echo DB_ENGINE=${{ secrets.DB_ENGINE }} >> .env
             echo DB_NAME=${{ secrets.DB_NAME }} >> .env
