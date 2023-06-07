@@ -6,7 +6,7 @@ from secret import SKEY
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = SKEY
+SECRET_KEY = os.getenv('SKEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
