@@ -1,4 +1,4 @@
-[![status](https://github.com/skuld23/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)](github.com/skuld23/yamdb_final/actions/workflows/yamdb_workflow.yml)
+[![Yamdb workflow](https://github.com/Skuld23/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)](https://github.com/Skuld23/yamdb_final/actions/workflows/yamdb_workflow.yml)
 # Проект Яндекс-Практикума YaMDb
 
 ## Описание 
@@ -31,7 +31,7 @@ http://127.0.0.1:8000/redoc/
 
 ## Стек технологий
 - проект написан на Python с использованием веб-фреймворка Django REST Framework
-- библиотека Simple JWT - работа с JWT-токеном
+- библиотека Simpsle JWT - работа с JWT-токеном
 - библиотека django-filter - фильтрация запросов
 - база данных - SQLite
 - система управления версиями - git
@@ -110,7 +110,7 @@ docker-compose exec web python manage.py loaddata fixtures.json
 #### Шаблон наполнения файла (в /infra):
 ```
 DB_ENGINE=django.db.backends.postgresql # указываем, что работаем с postgresql
-DB_NAME=postgres # имя базы данных
+DB_NAME=postgres # имя базы даннцых
 POSTGRES_USER=username # логин для подключения к базе данных
 POSTGRES_PASSWORD=password # пароль для подключения к БД 
 DB_HOST=db # название сервиса (контейнера)
@@ -125,10 +125,10 @@ docker-compose exec web python manage.py createsuperuser
 
 * Для проверки работоспособности приложения:
 ```
-http:/<ip_address>/admin/
+http:/158.160.33.198/admin/
 ```
 
 ## Документация для YaMDb доступна по адресу:
 ```
-http:/<ip_address>/redoc/
+http:/158.160.33.198/redoc/
 ```
