@@ -1,7 +1,7 @@
 import os
 from datetime import timedelta
 from pathlib import Path
-from secret import *SKEY
+from secret import SKEY
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
