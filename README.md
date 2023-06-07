@@ -109,7 +109,7 @@ docker-compose exec web python manage.py loaddata fixtures.json
 ### Файл .env:
 #### Шаблон наполнения файла (в /infra):
 ```
-DB_ENGINE=django.db.backends.postgresql # указываем, что работаем с postgresql
+DB_ENGINE=django.db.backends.postgresql # указваем, что работаем с postgresql
 DB_NAME=postgres # имя базы даннцых
 POSTGRES_USER=username # логин для подключения к базе данных
 POSTGRES_PASSWORD=password # пароль для подключения к БД 
