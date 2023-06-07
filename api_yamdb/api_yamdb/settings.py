@@ -9,7 +9,7 @@ SECRET_KEY = 'SKEY'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['51.250.86.51', '127.0.0.1', 'localhost']
+ALLOWED_HOSTS = ['158.160.33.198', '127.0.0.1', 'localhost']
 # Application definition
 
 INSTALLED_APPS = [
