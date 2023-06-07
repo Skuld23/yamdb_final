@@ -54,6 +54,7 @@ jobs:
           key: '${{ secrets.SSH_KEY }}'
           passphrase: '${{ secrets.PASSPHRASE }}'
           script: |
+            cd yamdb_final
             sudo docker-compose stop
             sudo docker-compose rm web
             touch .env
@@ -74,3 +75,4 @@ jobs:
           to: '${{ secrets.TELEGRAM_TO }}'
           token: '${{ secrets.TELEGRAM_TOKEN }}'
           message: '${{ github.workflow }} успешно выполнен!'
+          
