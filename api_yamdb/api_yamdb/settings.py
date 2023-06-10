@@ -2,14 +2,15 @@ import os
 from datetime import timedelta
 from pathlib import Path
 
+
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.getenv('SKEY')
+SECRET_KEY = os.getenv('SKEY', default='default')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['158.160.33.198', '127.0.0.1', 'localhost']
+ALLOWED_HOSTS = ['*']
 # Application definition
 
 INSTALLED_APPS = [

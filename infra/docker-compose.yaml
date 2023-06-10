@@ -27,8 +27,7 @@ services:
       - static_value:/var/html/static/
       - media_value:/var/html/media/
     env_file:
-      -./.env
-
+      - ./.env
     depends_on:
       - web
 
