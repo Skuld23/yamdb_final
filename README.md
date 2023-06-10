@@ -129,10 +129,10 @@ docker-compose exec web python manage.py createsuperuser
 
 * Для проверки работоспособности приложения:
 ```
-http:/158.160.33.198/admin/
+http:/51.250.68.193/admin/
 ```
    
 ## Документация для YaMDb доступна по адресу:
 ```
-http:/158.160.33.198/redoc/
+http:/51.250.68.193/redoc/
 ```
